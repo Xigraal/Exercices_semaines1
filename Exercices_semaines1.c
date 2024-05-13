@@ -718,6 +718,6 @@ void Suppl_Ex2() {
 	y = z;
 
 	printf("La nouvelle valeur de x est: %d", x);
-	printf("La nouvelle valeur de y est: %d", x);
+	printf("La nouvelle valeur de y est: %d", y);
 	
 }
