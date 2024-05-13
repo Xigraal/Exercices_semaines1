@@ -9,6 +9,7 @@
 #define _CRT_SECURE_NO_WARNINGS // pour ignorer les erreurs pour scanf_s
 #define MAX 10
 #define M_PI 3.1416
+#define EPSILON 0.0001
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -762,4 +763,23 @@ void Suppl_Ex3() {
 		}
 		
 	} while (choix != 'c');
+}
+/*-----------------------------------------------------------------------------------*/
+void Suppl_Ex1() {
+
+	double a = 0.0;  // Valeur inserer par l'utilisateur
+	double x;  // Variable a initialiser
+
+	printf("Veuillez entrer une valeur decimale: ");
+	scanf("%d", &a);
+	
+	x = a;
+
+	While ((pow(x,2) - a) > EPSILON) {
+	x = ((x/2) + (a /(2*x)));
+	}
+
+	printf("La valeur de a: %lf", a);
+	printf("La racine carree de a est: %lf", x);
+	
 }
