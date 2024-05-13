@@ -8,6 +8,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS // pour ignorer les erreurs pour scanf_s
 #define MAX 10
+#define M_PI 3.1416
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -39,7 +40,7 @@ void Suppl_Ex4();
 *Nom de l'exercice: Exercices_semaines1.c
 * main()
 * Description:programme qui test les differents exercices de la semaine 1
-* Paramètres: aucun
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 int main() {
@@ -77,11 +78,11 @@ int main() {
 
 			switch (choix) {
 		case 1:
-			printf("\nCe programe permet d'afficher “Bonjour tout le monde” à l’écran => \n\n");
+			printf("\nCe programe permet d'afficher â€œBonjour tout le mondeâ€ Ã  lâ€™Ã©cran => \n\n");
 			Ex1_part1();
 			break;
 		case 2:
-			printf("Ce programe permet d'afficher l'Horaire des repas a l’écran => \n\n");
+			printf("Ce programe permet d'afficher l'Horaire des repas a lâ€™Ã©cran => \n\n");
 			Ex2_part1();
 			break;
 		case 3:
@@ -101,15 +102,15 @@ int main() {
 			Ex6_part1();
 			break;
 		case 7:
-			printf("\nCe programe permet d'indiquer si l’entier insere est positif, négatif ou nulle (égal à zéro) => \n\n");
+			printf("\nCe programe permet d'indiquer si lâ€™entier insere est positif, nÃ©gatif ou nulle (Ã©gal Ã  zÃ©ro) => \n\n");
 			Ex1_part2();
 			break;
 		case 8:
-			printf("\nCe programe permet de calculer l’indice de masse corporelle de l’usager => \n\n");
+			printf("\nCe programe permet de calculer lâ€™indice de masse corporelle de lâ€™usager => \n\n");
 			Ex2_part2();
 			break;
 		case 9:
-			printf("\nCe programe permet de calculer le salaire hebdomadaire d’un employer => \n\n");
+			printf("\nCe programe permet de calculer le salaire hebdomadaire dâ€™un employer => \n\n");
 			Ex3_part2();
 			break;
 		case 10:
@@ -133,11 +134,11 @@ int main() {
 			Ex4_part3();
 			break;
 		case 15:
-			printf("\nCe programe permet d'afficher le nombre de lancer qui a été nécessaire \npour arriver a obtenir la valeur 6 20 fois d'un de a 6 faces. => \n\n");
+			printf("\nCe programe permet d'afficher le nombre de lancer qui a Ã©tÃ© nÃ©cessaire \npour arriver a obtenir la valeur 6 20 fois d'un de a 6 faces. => \n\n");
 			Ex1_part4();
 			break;
 		case 16:
-			printf("\nCe programe permet d'afficher l’identité de la valeur qui a été obtenue le plus souvent d'une somme de deux des lancers. => \n\n");
+			printf("\nCe programe permet d'afficher lâ€™identitÃ© de la valeur qui a Ã©tÃ© obtenue le plus souvent d'une somme de deux des lancers. => \n\n");
 			Ex2_part4();
 			break;
 		case 17:
@@ -160,7 +161,7 @@ int main() {
 			printf("Fin du programme.\n");
 			break;
 		default:
-			printf("Choix invalide. Veuillez réessayer.\n");
+			printf("Choix invalide. Veuillez rÃ©essayer.\n");
 		}
 		
 	} while (choix != 22);
@@ -173,8 +174,8 @@ int main() {
  /*
   * Nom de l'exercice: Ex1_part1
   * Ex1_part1()
-  * Description:programme qui affiche “Bonjour tout le monde” à l’écran
-  * Paramètres: aucun
+  * Description:programme qui affiche â€œBonjour tout le mondeâ€ Ã  lâ€™Ã©cran
+  * ParamÃ¨tres: aucun
   * Retour: status de la fin du programme
   */
  
@@ -186,7 +187,7 @@ void Ex1_part1() {
 /*
   * Nom de l'exercice: Ex2_part1
   * Ex2_part1()
-  * Description:programme qui affiche l'heure du dejeuner, diner et souper à l’écran
+  * Description:programme qui affiche l'heure du dejeuner, diner et souper Ã  lâ€™Ã©cran
   * Retour: status de la fin du programme
   */
  
@@ -202,9 +203,9 @@ void Ex2_part1() {
 /*
   * Nom de l'exercice: Ex3_part1
   * Ex3_part1()
-  * Description:programme qui demande à l’usager d’entrer un entier,
-  *             le programme affiche le nombre multiplié par deux
-  * Paramètres: aucun
+  * Description:programme qui demande Ã  lâ€™usager dâ€™entrer un entier,
+  *             le programme affiche le nombre multipliÃ© par deux
+  * ParamÃ¨tres: aucun
   * Retour: status de la fin du programme
   */
   
@@ -224,10 +225,10 @@ void Ex3_part1() {
 /*
   * Nom de l'exercice: Ex4_part1
   * Ex4_part1()
-  * Description:programme qui demande à l’usager d’entrer un double, 
-  *             le programme affiche ensuite le nombre au carré, en 
+  * Description:programme qui demande Ã  lâ€™usager dâ€™entrer un double, 
+  *             le programme affiche ensuite le nombre au carrÃ©, en 
   *             utilisant la fonction pow() de la librairie math.h
-  * Paramètres: aucun
+  * ParamÃ¨tres: aucun
   * Retour: status de la fin du programme
   */
   
@@ -247,27 +248,27 @@ void Ex4_part1() {
 /*
   * Nom de l'exercice: Ex5_part1
   * Ex5_part1()
-  * Description:programme qui calcule le prix à payer en plus des taxes.
-  *             Il demande à l’usager le nombre d’articles achetés (entier),
-  *			    le prix d’un article (double), puis il affiche le prix total 
-  *			    (double) avec une précision de 2 décimaux, en comptant 14.97% 
+  * Description:programme qui calcule le prix Ã  payer en plus des taxes.
+  *             Il demande Ã  lâ€™usager le nombre dâ€™articles achetÃ©s (entier),
+  *			    le prix dâ€™un article (double), puis il affiche le prix total 
+  *			    (double) avec une prÃ©cision de 2 dÃ©cimaux, en comptant 14.97% 
   *			    de taxe de vente.
-  * Paramètres: aucun
+  * ParamÃ¨tres: aucun
   * Retour: status de la fin du programme
   */
   
 void Ex5_part1() {
 
 	const double taxe = 0.1497; // taxe de vente
-	int nb = 0; // variable qui contiendra le nombre d'articles achetés
-	double prix = 0.0; // variable qui contiendra le prix d’un article
+	int nb = 0; // variable qui contiendra le nombre d'articles achetÃ©s
+	double prix = 0.0; // variable qui contiendra le prix dâ€™un article
 	double total_s = 0.0; // variable qui contiendra le prix total sans taxe
     double total_a = 0.0; // variable qui contiendra le prix total avec taxe
 
 	printf("Veuillez entrer le nombre d'articles achetes :\t");
 	scanf(" %d", &nb);
 
-	printf("Veuillez entrer le prix d’un article :\t");
+	printf("Veuillez entrer le prix dâ€™un article :\t");
 	scanf(" %lf", &prix);
 
 	total_s = nb * prix;
@@ -281,8 +282,8 @@ void Ex5_part1() {
 /*
   * Nom de l'exercice: Ex6_part1
   * Ex6_part1()
-  * Description:programme qui affiche le nombre pi avec différente précision
-  * Paramètres: aucun
+  * Description:programme qui affiche le nombre pi avec diffÃ©rente prÃ©cision
+  * ParamÃ¨tres: aucun
   * Retour: status de la fin du programme
   */
  
@@ -299,9 +300,9 @@ void Ex6_part1() {
 /*
   * Nom de l'exercice: Ex1_part2
   Ex1_part2()
-  * Description:programme qui demande à l’usager d’entrer un entier. 
-  *              Le programme doit afficher si l’entier est positif, 
-  *              négatif ou nulle (égal à zéro)
+  * Description:programme qui demande Ã  lâ€™usager dâ€™entrer un entier. 
+  *              Le programme doit afficher si lâ€™entier est positif, 
+  *              nÃ©gatif ou nulle (Ã©gal Ã  zÃ©ro)
   * Retour: status de la fin du programme
   */
   
@@ -312,12 +313,12 @@ void Ex1_part2() {
 	printf("Veuillez entrer une valeure entiere : ");
 	scanf(" %d",&nb);
 
-	// Condition pour vérifier si le nombre est positif, négatif ou nul
+	// Condition pour vÃ©rifier si le nombre est positif, nÃ©gatif ou nul
 	if (nb > 0) {
 		printf("L'entier %d est positif.\n", nb);
 	}
 	else if (nb < 0) {
-		printf("L'entier %d est négatif.\n", nb);
+		printf("L'entier %d est nÃ©gatif.\n", nb);
 	}
 	else {
 		printf("L'entier est nul.\n");
@@ -328,16 +329,16 @@ void Ex1_part2() {
 /*
   * Nom de l'exercice: Ex2_part2
   * Ex2_part2()
-  * Description:programme qui demande à un usager d’entrer son poids (en kg) 
+  * Description:programme qui demande Ã  un usager dâ€™entrer son poids (en kg) 
   *             et sa taille (en m), tous deux des doubles. 
-  *			    Le programme doit en ensuite calculer l’indice de masse corporelle
-  *				de l’usager en utilisant la fonction suivante:
+  *			    Le programme doit en ensuite calculer lâ€™indice de masse corporelle
+  *				de lâ€™usager en utilisant la fonction suivante:
   *             IMC = poids/pow(taille, 2)
-  * Le programme doit ensuite indiquer à l’usager dans quelle catégorie il se trouve:
-  * Si plus petit que 18.5, l’usager est maigre
-  * Si plus grand ou égal à 18.5 et plus petite que 25, l’usager est de corpulence normale
-  * Si plus grand ou égal à 25, l’usager est obèse
-  * Paramètres: aucun
+  * Le programme doit ensuite indiquer Ã  lâ€™usager dans quelle catÃ©gorie il se trouve:
+  * Si plus petit que 18.5, lâ€™usager est maigre
+  * Si plus grand ou Ã©gal Ã  18.5 et plus petite que 25, lâ€™usager est de corpulence normale
+  * Si plus grand ou Ã©gal Ã  25, lâ€™usager est obÃ¨se
+  * ParamÃ¨tres: aucun
   * Retour: status de la fin du programme
   */
   
@@ -345,7 +346,7 @@ void Ex2_part2() {
 
 	double poids = 0.0; // variable qui contiendra le poids (en kg)
 	double taille = 0.0; // variable qui contiendra la taille (en m)
-	double IMC = 0.0; // variable qui contiendra le calcul de l’indice de masse corporelle de l’usager
+	double IMC = 0.0; // variable qui contiendra le calcul de lâ€™indice de masse corporelle de lâ€™usager
 
 	printf("Veuillez entrer votre poids (en kg) : ");
 	scanf(" %lf", &poids);
@@ -355,7 +356,7 @@ void Ex2_part2() {
 
 	IMC = poids / pow(taille, 2);
 
-	// Condition pour vérifier si l'usager est maigre, de corpulence normale ou obèse
+	// Condition pour vÃ©rifier si l'usager est maigre, de corpulence normale ou obÃ¨se
 	if (IMC < 18.5) {
 		printf("vous etes maigre\n");
 	}
@@ -371,25 +372,25 @@ void Ex2_part2() {
 /*
 *Nom de l'exercice: Ex3_part2
 * Ex3_part2()
-* Description:programme qui calcule le salaire hebdomadaire d’un employer. 
-*             Celui-ci est payé 23$/heure, mais si le nombre d’heures travaillé 
-*			  dépasse 40 heures, chaque heures supplémentaire est payé au taux de 1.5 fois.
-* Paramètres: aucun
+* Description:programme qui calcule le salaire hebdomadaire dâ€™un employer. 
+*             Celui-ci est payÃ© 23$/heure, mais si le nombre dâ€™heures travaillÃ© 
+*			  dÃ©passe 40 heures, chaque heures supplÃ©mentaire est payÃ© au taux de 1.5 fois.
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
 void Ex3_part2() {
 
 	const double salaire = 23.0; //  // Taux horaire de base (en $)
-	const double salaire_sup = 34.5; // // Taux horaire pour les heures supplémentaires (en $)
-	double nb_heures = 0.0; // variable qui contiendra le nombre d’heures travaillé par l'employer
-	double salaire_hebd = 0.0; // variable qui contiendra le calcul du salaire hebdomadaire d’un employer
+	const double salaire_sup = 34.5; // // Taux horaire pour les heures supplÃ©mentaires (en $)
+	double nb_heures = 0.0; // variable qui contiendra le nombre dâ€™heures travaillÃ© par l'employer
+	double salaire_hebd = 0.0; // variable qui contiendra le calcul du salaire hebdomadaire dâ€™un employer
 
 	printf("Veuillez inserer votre nombre d'heures de travail de la semaine : ");
 	scanf(" %lf", &nb_heures);
 
 
-	// Condition pour vérifier si le nombre d’heures travaillé dépasse 40 heures
+	// Condition pour vÃ©rifier si le nombre dâ€™heures travaillÃ© dÃ©passe 40 heures
 	if (nb_heures > 40) {
 		salaire_hebd = 40 * salaire + ((nb_heures - 40) * salaire_sup);
 		printf("Votre salaire hebdomadaire est: %lf \n", salaire_hebd);
@@ -404,11 +405,11 @@ void Ex3_part2() {
 /*
 *Nom de l'exercice: Ex4_part2
 * Ex4_part2()
-* Description:programme qui demande à l’usager d’entrer trois entiers. 
+* Description:programme qui demande Ã  lâ€™usager dâ€™entrer trois entiers. 
 *             Le programme doit trouver quel nombre est le plus petit 
-*			  et l’afficher. S’il y a égalité sur le plus petit nombre,
-*			  le cas doit être détecté et indiqué à l’utilisateur.
-* Paramètres: aucun
+*			  et lâ€™afficher. Sâ€™il y a Ã©galitÃ© sur le plus petit nombre,
+*			  le cas doit Ãªtre dÃ©tectÃ© et indiquÃ© Ã  lâ€™utilisateur.
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
@@ -429,7 +430,7 @@ void Ex4_part2() {
 		min = nb3;
 	}
 
-	// Condition qui verifie s'il y a égalité sur le plus petit nombre
+	// Condition qui verifie s'il y a Ã©galitÃ© sur le plus petit nombre
 	if ((min == nb1 && min == nb2) || (min == nb2 && min == nb3) || (min == nb1 && min == nb3)) {
 		printf("il y a egalite sur le plus petit nombre qui est %d.\n", min);
 	}
@@ -442,11 +443,11 @@ void Ex4_part2() {
 /*
 *Nom de l'exercice: Ex1_part3
 * Ex1_part3()
-* Description:programme qui crée une variable “compteur” avec une valeur égal à 0.
-*             La fonction s'incremente de 1 à chaque itération et s’arrête quand 
-*			  la variable à atteint 10. Le script doit afficher la valeur finale 
+* Description:programme qui crÃ©e une variable â€œcompteurâ€ avec une valeur Ã©gal Ã  0.
+*             La fonction s'incremente de 1 Ã  chaque itÃ©ration et sâ€™arrÃªte quand 
+*			  la variable Ã  atteint 10. Le script doit afficher la valeur finale 
 *			  de la variable.
-* Paramètres: aucun
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
@@ -467,13 +468,13 @@ void Ex1_part3() {
 /*
 *Nom de l'exercice: Ex2_part3
 * Ex2_part3()
-* Description:programme qui demande à l’usager d’entrer un entier. 
-*             Le programme initialise une variable “compteur” à 0,
-*			  y additionne 2 à chaque itération et affiche le résultat.
-*			  Le programme ne doit s’arrêter qu'au moment ou le nombre entré
-*			  par l’usager est dépassé, mais ne pas afficher le nombre, 
-*			  s’il est plus grand que l’entrée de l’usager.
-* Paramètres: aucun
+* Description:programme qui demande Ã  lâ€™usager dâ€™entrer un entier. 
+*             Le programme initialise une variable â€œcompteurâ€ Ã  0,
+*			  y additionne 2 Ã  chaque itÃ©ration et affiche le rÃ©sultat.
+*			  Le programme ne doit sâ€™arrÃªter qu'au moment ou le nombre entrÃ©
+*			  par lâ€™usager est dÃ©passÃ©, mais ne pas afficher le nombre, 
+*			  sâ€™il est plus grand que lâ€™entrÃ©e de lâ€™usager.
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
@@ -485,7 +486,7 @@ void Ex2_part3() {
 	printf("Veuillez entrer un entier comme limite: ");
 	scanf(" %d", &Borne_max);
 
-	// Boucle qui s'incremente de 2 et s'arrête avant que compteur ne dépasse la limite
+	// Boucle qui s'incremente de 2 et s'arrÃªte avant que compteur ne dÃ©passe la limite
 	while (compteur <= Borne_max) {
 		printf("%d ", compteur);
 		compteur += 2;
@@ -496,12 +497,12 @@ void Ex2_part3() {
 /*
 *Nom de l'exercice: Ex3_part3
 * Ex3_part3()
-* Description:programme qui initialise une variable “compteur” à 1 et 
-*             y additionne 1 à chaque itération. Le programme s’arrête 
+* Description:programme qui initialise une variable â€œcompteurâ€ Ã  1 et 
+*             y additionne 1 Ã  chaque itÃ©ration. Le programme sâ€™arrÃªte 
 *			  quand la variable atteint 10. Bien que la variable prend 
 *			  toutes les valeurs entre 1 et 10, le programme ne doit 
 *			  afficher que les valeurs impairs.
-* Paramètres: aucun
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
@@ -510,7 +511,7 @@ void Ex3_part3() {
 	int compteur = 1; // variable qui contiendra la valeur iteree
 
 	printf("les valeurs impairs sont: ");
-	// Boucle qui s'incremente de 1 et s'arrête avant que compteur la valeur maximale
+	// Boucle qui s'incremente de 1 et s'arrÃªte avant que compteur la valeur maximale
 	while (compteur < MAX) {
 		compteur ++;
 		if (compteur % 2 !=0)
@@ -524,19 +525,19 @@ void Ex3_part3() {
 /*
 *Nom de l'exercice: Ex4_part3
 * Ex4_part3()
-* Description:programme qui demande à un usager d’entrer un entier minimum,
+* Description:programme qui demande Ã  un usager dâ€™entrer un entier minimum,
 *             un entier maximum et un interval (entier). Le programme doit
 *			  afficher tous les nombres entre le nombre minimum et maximum
-*			  inclusivement en sautant de l’interval donné.
-* Paramètres: aucun
+*			  inclusivement en sautant de lâ€™interval donnÃ©.
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
 void Ex4_part3() {
 
-	int Borne_max = 0;  // Valeur de la borne supérieure
-	int Borne_min = 0;  // Valeur de la borne inférieure
-	int interval = 0;   // Interval donné
+	int Borne_max = 0;  // Valeur de la borne supÃ©rieure
+	int Borne_min = 0;  // Valeur de la borne infÃ©rieure
+	int interval = 0;   // Interval donnÃ©
 	int nb;             // iterations
 
 	printf("Veuillez entrer un entier comme borne inferieure: ");
@@ -550,7 +551,7 @@ void Ex4_part3() {
 
 	nb = Borne_min;
 
-	// Boucle qui s'incremente de 2 et s'arrête avant que compteur ne dépasse la limite
+	// Boucle qui s'incremente de 2 et s'arrÃªte avant que compteur ne dÃ©passe la limite
 	while (nb >= Borne_min && nb <= Borne_max) {
 		printf("%d ", nb);
 		nb += interval;
@@ -562,27 +563,27 @@ void Ex4_part3() {
 /*
 *Nom de l'exercice: Ex1_part4
 * Ex1_part4()
-* Description: programme qui lance un dé aléatoire à 6 faces,
-*              à l’aide de la fonction rand(), tant que le 6 
-*			   n’ait pas sorti 20 fois. Il doit compter le nombre 
-*			   de lancer qui a été nécessaire pour y arriver.
-* Paramètres: aucun
+* Description: programme qui lance un dÃ© alÃ©atoire Ã  6 faces,
+*              Ã  lâ€™aide de la fonction rand(), tant que le 6 
+*			   nâ€™ait pas sorti 20 fois. Il doit compter le nombre 
+*			   de lancer qui a Ã©tÃ© nÃ©cessaire pour y arriver.
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
 void Ex1_part4() {
 
-	// Initialise le générateur 
+	// Initialise le gÃ©nÃ©rateur 
 	srand(time(NULL));
 
 	// Initialise les variables
 	int compte_total = 0; // Nombre de lancers
-	int nb_alea; // Valeur aléatoire obtenue
-	int compte_6 = 0; // Nombre de fois que 6 a été perçu
+	int nb_alea; // Valeur alÃ©atoire obtenue
+	int compte_6 = 0; // Nombre de fois que 6 a Ã©tÃ© perÃ§u
 
-	// Continue de lancer le dé jusqu'à ce que le 6 soit sorti 20 fois
+	// Continue de lancer le dÃ© jusqu'Ã  ce que le 6 soit sorti 20 fois
 	while (compte_6 < 20) {
-		nb_alea = rand() % 6 + 1;  // Génère un nombre entre 1 et 6
+		nb_alea = rand() % 6 + 1;  // GÃ©nÃ¨re un nombre entre 1 et 6
 
 		if (nb_alea == 6) {
 			compte_6++;
@@ -591,48 +592,48 @@ void Ex1_part4() {
 		// Ajoute au compte total
 		compte_total++;
 
-		// Affiche le résultat du lancer
+		// Affiche le rÃ©sultat du lancer
 		printf("%d\n", nb_alea);
 	}
 
-	// Affiche le nombre total de lancers nécessaires
+	// Affiche le nombre total de lancers nÃ©cessaires
 	printf("Nombre de lancers necessaires \npour obtenir vingt fois le chiffre 6 : %d\n", compte_total);
 }
 
 /*
 *Nom de l'exercice: Ex2_part4
 * Ex1_part4()
-* Description: programme qui lance deux dés aléatoire à 3 faces 
-*              à l’aide de la fonction rand(). Il fait ensuite la somme 
-*			   des deux, puis compte combien d’occurence de chacune 
-*			   des valeurs possible: 2 à 6. Les dé sont lancé 
-*			   jusqu’à ce que l’une des valeurs est été lancé 100 fois.
-*			   Le programme affiche ensuite l’identité de la valeur 
-*			   qui a été obtenue le plus souvent.
-* Paramètres: aucun
+* Description: programme qui lance deux dÃ©s alÃ©atoire Ã  3 faces 
+*              Ã  lâ€™aide de la fonction rand(). Il fait ensuite la somme 
+*			   des deux, puis compte combien dâ€™occurence de chacune 
+*			   des valeurs possible: 2 Ã  6. Les dÃ© sont lancÃ© 
+*			   jusquâ€™Ã  ce que lâ€™une des valeurs est Ã©tÃ© lancÃ© 100 fois.
+*			   Le programme affiche ensuite lâ€™identitÃ© de la valeur 
+*			   qui a Ã©tÃ© obtenue le plus souvent.
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
 void Ex2_part4() {
-	// Initialise le générateur
+	// Initialise le gÃ©nÃ©rateur
 	srand(time(NULL));
 
-	// Tableau pour compter les occurrences de chaque somme possible (2 à 6)
+	// Tableau pour compter les occurrences de chaque somme possible (2 Ã  6)
 	int occurrences[5] = { 0 };  // Index 0 pour somme 2,..., index 4 pour somme 6
 
-	int nb_alea_de1, nb_alea_de2; // Valeurs aléatoires obtenues des dés
-	int somme_des; // somme obtenues des dés
-	int lancer_total = 0; // total des lancers obtenus des dés
+	int nb_alea_de1, nb_alea_de2; // Valeurs alÃ©atoires obtenues des dÃ©s
+	int somme_des; // somme obtenues des dÃ©s
+	int lancer_total = 0; // total des lancers obtenus des dÃ©s
 	int max_occurrence = 0; // le maximum d'occurence obtenus d'une somme
 	int valeur_max = 2; // La plus petite somme possible est 2
 
-	// Continue de lancer les dés jusqu'à ce qu'une des valeurs soit lancée 100 fois
+	// Continue de lancer les dÃ©s jusqu'Ã  ce qu'une des valeurs soit lancÃ©e 100 fois
 	while (max_occurrence < 100) {
-		nb_alea_de1 = rand() % 3 + 1;  // Génère un nombre entre 1 et 3 pour le premier dé
-		nb_alea_de2 = rand() % 3 + 1;  // Génère un nombre entre 1 et 3 pour le deuxième dé
+		nb_alea_de1 = rand() % 3 + 1;  // GÃ©nÃ¨re un nombre entre 1 et 3 pour le premier dÃ©
+		nb_alea_de2 = rand() % 3 + 1;  // GÃ©nÃ¨re un nombre entre 1 et 3 pour le deuxiÃ¨me dÃ©
 		somme_des = nb_alea_de1 + nb_alea_de2;
 
-		// Incrémente l'occurrence de la somme obtenue
+		// IncrÃ©mente l'occurrence de la somme obtenue
 		occurrences[somme_des - 2]++;
 		if (occurrences[somme_des - 2] > max_occurrence) {
 			max_occurrence = occurrences[somme_des - 2];
@@ -641,7 +642,7 @@ void Ex2_part4() {
 
 		lancer_total++;
 
-		// Affiche le résultat du lancer
+		// Affiche le rÃ©sultat du lancer
 		printf("%d %d\n", nb_alea_de1, nb_alea_de2);
 	}
 
@@ -653,17 +654,17 @@ void Ex2_part4() {
 /*
 *Nom de l'exercice: Ex2_part4
 * Ex1_part4()
-* Description: programme qui demande à l’usager un entier minium et un entier
+* Description: programme qui demande Ã  lâ€™usager un entier minium et un entier
 *              maximum. Le programme doit compter tous les nombres pairs entre 
 *			   ces deux nombres.
-* Paramètres: aucun
+* ParamÃ¨tres: aucun
 * Retour : status de la fin du programme
 */
 
 void Ex3_part4() {
 
-	int Borne_max = 0;  // Valeur de la borne supérieure
-	int Borne_min = 0;  // Valeur de la borne inférieure
+	int Borne_max = 0;  // Valeur de la borne supÃ©rieure
+	int Borne_min = 0;  // Valeur de la borne infÃ©rieure
 	int nb;             // iterations
 
 	printf("Veuillez entrer un entier comme borne inferieure: ");
@@ -674,7 +675,7 @@ void Ex3_part4() {
 
 	nb = Borne_min;
 
-	// Boucle qui s'incremente de 2 et s'arrête avant que compteur ne dépasse la limite
+	// Boucle qui s'incremente de 2 et s'arrÃªte avant que compteur ne dÃ©passe la limite
 	while (nb >= Borne_min && nb <= Borne_max) {
 
 		if(nb % 2 == 0){
@@ -683,4 +684,24 @@ void Ex3_part4() {
 		nb++;
 	}
 
+}
+/*-----------------------------------------------------------------------------------*/
+void Suppl_Ex1() {
+
+	double Rayon = 0.0;  // Valeur du rayon de la sphere
+	double Diametre = 0.0;  // Valeur du diametre de la sphere
+	double Aire = 0.0;          // aire de la sphere
+	double Volume = 0.0;
+
+	printf("Veuillez entrer le rayon de la sphere: ");
+	scanf("%d", &Rayon);
+
+	Diametre = 2 * Rayon;
+	Aire = (4 * M_PI)* pow(Rayon, 2);
+	Volume = (4 * M_PI)/(3 * pow(Rayon, 3));
+
+	printf("Le diametre de la sphere est: %lf", Diametre);
+	printf("L'aire de la sphere est: %lf", Aire);
+	printf("Le Volume de la sphere est: %lf", Volume);
+	
 }
