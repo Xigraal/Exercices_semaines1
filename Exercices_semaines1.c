@@ -705,3 +705,19 @@ void Suppl_Ex1() {
 	printf("Le Volume de la sphere est: %lf", Volume);
 	
 }
+
+/*-----------------------------------------------------------------------------------*/
+void Suppl_Ex2() {
+
+	int x = 15;  // Variable qui contient la premiere Valeur
+        int y = 30;  // Variable qui contient la deuxieme valeur
+	int Z = 0;          // Valeur temporaire
+
+	z = x;
+	x = y;
+	y = z;
+
+	printf("La nouvelle valeur de x est: %d", x);
+	printf("La nouvelle valeur de y est: %d", x);
+	
+}
