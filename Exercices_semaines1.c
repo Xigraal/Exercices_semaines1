@@ -721,3 +721,45 @@ void Suppl_Ex2() {
 	printf("La nouvelle valeur de y est: %d", y);
 	
 }
+/*-----------------------------------------------------------------------------------*/
+void Suppl_Ex3() {
+      char choix;
+
+		printf("Menu des choix :\n");
+		printf(" 1 => Sphere\n");
+		printf(" 2 => Anneau spherique\n");
+	        printf(" 3 => Pour terminer le programme\n");
+
+	do {
+			printf("\n\nVeuillez entrez votre choix: ");
+			scanf(" %d", &choix);
+
+			switch (choix) {
+		case 'a':
+			Suppl_Ex1();
+			break;
+		case 'b':
+			double Rayon = 0.0;  // Valeur du rayon de l'annaeu
+			double Aire = 0.0;   // aire de l'annaeu
+			double Hauteur = 0.0; // Hauteur de l'anneau
+
+				printf("Veuillez entrer le rayon de la sphere: ");
+				scanf("%d", &Rayon);
+
+			        printf("Veuillez entrer la hauteur de l'anneau: ");
+				scanf("%d", &Hauteur);
+
+			Aire = (2 * M_PI)* Rayon * Hauteur;
+			
+			printf("L'aire de la sphere est: %lf", Aire);
+			
+			break;
+	        case 'c':
+			printf("\n\ C'est la fin du programme : ");
+			break;
+	        default:
+			printf("Choix invalide. Veuillez réessayer.\n");
+		}
+		
+	} while (choix != 'c');
+}
