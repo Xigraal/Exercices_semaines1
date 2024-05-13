@@ -146,18 +146,22 @@ int main() {
 			printf("\nCe programe permet de compter tous les nombres pairs entre un minimum et un maximum => \n\n");
 			Ex3_part4();
 			break;
-		/*case 18:
+		case 18:
+			printf("\nCe programe permet de calculer le diametre, l'aire et le volume => \n\n");
 			Suppl_Ex1();
 			break;
 		case 19:
+			printf("\nCe programe permet d'echanger deux valeurs en memoire => \n\n");
 			Suppl_Ex2();
 			break;
 		case 20:
+			printf("\nCe programe permet de calculer le diametre, l'aire et le volume d'une sphere ou l'aire d'un anneau=> \n\n");
 			Suppl_Ex3();
 			break;
 		case 21:
+			printf("\nCe programe permet de calculer la racine carree d'un nombre a par la methode de Newton => \n\n");
 			Suppl_Ex4();
-			break; */	
+			break;	
 		case 22:
 			printf("Fin du programme.\n");
 			break;
