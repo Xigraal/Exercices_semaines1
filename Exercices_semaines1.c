@@ -769,7 +769,7 @@ void Suppl_Ex3() {
 	} while (choix != 'c');
 }
 /*-----------------------------------------------------------------------------------*/
-void Suppl_Ex1() {
+void Suppl_Ex4() {
 
 	double a = 0.0;  // Valeur inserer par l'utilisateur
 	double x;  // Variable a initialiser
