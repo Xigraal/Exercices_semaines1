@@ -3,13 +3,17 @@
  * Nom du fichier: Exercices_semaines1.c
  * Auteur: Thanisma Even Marcelin
  * Date: 2024/05/06
- * Description:Listes d'exercices de la semaine 1 pour le cours d'INF147		   
+ * Description:Listes d'exercices de la semaine 1 pour le cours d'INF147
  */
 
 #define _CRT_SECURE_NO_WARNINGS // pour ignorer les erreurs pour scanf_s
+
 #define MAX 10
+#define LIMIT_MIN_IMC 18.5
+#define LIMIT_MAX_IMC 25
 #define M_PI 3.1416
 #define EPSILON 0.0001
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -70,7 +74,8 @@ int main() {
 		printf("19 => Suppl_Ex2\n");
 		printf("20 => Suppl_Ex3\n");
 		printf("21 => Suppl_Ex4\n");
-		printf("22 => Pour mettre fin au programme.\n");
+		printf("22 => Pour voir le code secret.\n");
+		printf("23 => Pour mettre fin au programme.\n");
 
 
 		do {
@@ -161,15 +166,23 @@ int main() {
 		case 21:
 			printf("\nCe programe permet de calculer la racine carree d'un nombre a par la methode de Newton => \n\n");
 			Suppl_Ex4();
-			break;	
+			break;
 		case 22:
+			printf("La vie d'un ingenieur est comme un code à deboguer:");
+			printf("chaque probleme est une enigme a resoudre, et chaque \n");
+			printf("solution nous rapproche un peu plus de la perfection.\n");
+			printf("Ainsi, chaque défi est une opportunité de croissance,\n");
+			printf("et chaque obstacle surmonte est une preuve\n");
+			printf("de sa determination et de son ingeniosite.");
+			break;
+		case 23:
 			printf("Fin du programme.\n");
 			break;
 		default:
 			printf("Choix invalide. Veuillez réessayer.\n");
 		}
 		
-	} while (choix != 22);
+	} while (choix != 23);
 
 	// garde la console ouverte
 	system("pause");
@@ -246,7 +259,7 @@ void Ex4_part1() {
 
 	val = pow(val,2); // valeure decimale au carre
 
-	printf("la valeur decimale inserer au carree est: %lf\n", val);
+	printf("la valeur decimale inserer au carree est: %.3lf\n", val);
 
 }
 
@@ -362,10 +375,10 @@ void Ex2_part2() {
 	IMC = poids / pow(taille, 2);
 
 	// Condition pour vérifier si l'usager est maigre, de corpulence normale ou obèse
-	if (IMC < 18.5) {
+	if (IMC < LIMIT_MIN_IMC) {
 		printf("vous etes maigre\n");
 	}
-	else if (IMC >= 18.5 && IMC < 25) {
+	else if (IMC >= LIMIT_MIN_IMC && IMC < LIMIT_MAX_IMC) {
 		printf("vous etes de corpulence normale\n");
 	}
 	else {
@@ -551,6 +564,10 @@ void Ex4_part3() {
 	printf("Veuillez entrer un entier comme borne superieure: ");
 	scanf("%d", &Borne_max);
 
+	if (Borne_min > Borne_max) {
+		printf("Votre valeur minimum inserer depasse celle maximale, utiliser un peu votre cerveau\n. ");
+	}
+
 	printf("Veuillez entrer un entier comme interval: ");
 	scanf("%d", &interval);
 
@@ -678,6 +695,10 @@ void Ex3_part4() {
 	printf("Veuillez entrer un entier comme borne superieure: ");
 	scanf("%d", &Borne_max);
 
+	if (Borne_min > Borne_max) {
+		printf("Votre valeur minimum inserer depasse celle maximale, utiliser un peu votre cerveau\n. ");
+	}
+
 	nb = Borne_min;
 
 	// Boucle qui s'incremente de 2 et s'arrête avant que compteur ne dépasse la limite
@@ -699,73 +720,72 @@ void Suppl_Ex1() {
 	double Volume = 0.0;
 
 	printf("Veuillez entrer le rayon de la sphere: ");
-	scanf("%d", &Rayon);
+	scanf(" %lf", &Rayon);
 
 	Diametre = 2 * Rayon;
-	Aire = (4 * M_PI)* pow(Rayon, 2);
-	Volume = (4 * M_PI)/(3 * pow(Rayon, 3));
+	Aire = (4 * M_PI) * pow(Rayon, 2);
+	Volume = (4 * M_PI) / (3 * pow(Rayon, 3));
 
-	printf("Le diametre de la sphere est: %lf", Diametre);
-	printf("L'aire de la sphere est: %lf", Aire);
-	printf("Le Volume de la sphere est: %lf", Volume);
-	
+	printf("Le diametre de la sphere est: %lf\n", Diametre);
+	printf("L'aire de la sphere est: %lf\n", Aire);
+	printf("Le Volume de la sphere est: %lf\n", Volume);
+
 }
-
 /*-----------------------------------------------------------------------------------*/
 void Suppl_Ex2() {
 
 	int x = 15;  // Variable qui contient la premiere Valeur
-        int y = 30;  // Variable qui contient la deuxieme valeur
-	int Z = 0;          // Valeur temporaire
+	int y = 30;  // Variable qui contient la deuxieme valeur
+	int z = 0;          // Valeur temporaire
 
 	z = x;
 	x = y;
 	y = z;
 
-	printf("La nouvelle valeur de x est: %d", x);
-	printf("La nouvelle valeur de y est: %d", y);
-	
+	printf("La nouvelle valeur de x est: %d\n", x);
+	printf("La nouvelle valeur de y est: %d\n", y);
+
 }
 /*-----------------------------------------------------------------------------------*/
 void Suppl_Ex3() {
-      char choix;
+	char choix;
+	double Rayon = 0.0;  // Valeur du rayon de l'annaeu
+	double Aire = 0.0;   // aire de l'annaeu
+	double Hauteur = 0.0; // Hauteur de l'anneau
 
-		printf("Menu des choix :\n");
-		printf(" 1 => Sphere\n");
-		printf(" 2 => Anneau spherique\n");
-	        printf(" 3 => Pour terminer le programme\n");
+	printf("Menu des choix :\n");
+	printf(" a => Sphere\n");
+	printf(" b => Anneau spherique\n");
+	printf(" c => Pour terminer le programme\n");
 
 	do {
-			printf("\n\nVeuillez entrez votre choix: ");
-			scanf(" %d", &choix);
+		printf("\n\nVeuillez entrez votre choix, soit (a ou b): ");
+		scanf(" %c", &choix);
 
-			switch (choix) {
+		switch (choix) {
 		case 'a':
 			Suppl_Ex1();
 			break;
 		case 'b':
-			double Rayon = 0.0;  // Valeur du rayon de l'annaeu
-			double Aire = 0.0;   // aire de l'annaeu
-			double Hauteur = 0.0; // Hauteur de l'anneau
 
-				printf("Veuillez entrer le rayon de la sphere: ");
-				scanf("%d", &Rayon);
+			printf("Veuillez entrer le rayon de la sphere: ");
+			scanf(" %lf", &Rayon);
 
-			        printf("Veuillez entrer la hauteur de l'anneau: ");
-				scanf("%d", &Hauteur);
+			printf("Veuillez entrer la hauteur de l'anneau: ");
+			scanf(" %lf", &Hauteur);
 
-			Aire = (2 * M_PI)* Rayon * Hauteur;
-			
+			Aire = (2 * M_PI) * Rayon * Hauteur;
+
 			printf("L'aire de la sphere est: %lf", Aire);
-			
+
 			break;
-	        case 'c':
+		case 'c':
 			printf("\n\ C'est la fin du programme : ");
 			break;
-	        default:
+		default:
 			printf("Choix invalide. Veuillez réessayer.\n");
 		}
-		
+
 	} while (choix != 'c');
 }
 /*-----------------------------------------------------------------------------------*/
@@ -775,15 +795,15 @@ void Suppl_Ex4() {
 	double x;  // Variable a initialiser
 
 	printf("Veuillez entrer une valeur decimale: ");
-	scanf("%d", &a);
-	
+	scanf(" %lf", &a);
+
 	x = a;
 
-	While ((pow(x,2) - a) > EPSILON) {
-	x = ((x/2) + (a /(2*x)));
+	while ((pow(x, 2) - a) > EPSILON) {
+		x = ((x / 2) + (a / (2 * x)));
 	}
 
-	printf("La valeur de a: %lf", a);
-	printf("La racine carree de a est: %lf", x);
-	
+	printf("La valeur de a est: %lf\n", a);
+	printf("La racine carree de a est: %lf\n", x);
+
 }
